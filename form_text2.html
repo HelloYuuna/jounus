@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Form Text2</title>
+		<link rel="stylesheet" href="./style/form.css" />
+	</head>
+	<body>
+		<div class="content">
+			<h1>다양한 폼 태그</h1>
+			<form>
+				<table>
+					<tr>
+						<th class="subtitle">
+							<label for="usrid">사용자 아이디</label>
+						</th>
+						<td>
+							<input
+								id="usrid"
+								type="text"
+								name="usrid"
+								placeholder="아이디 5~10사이"
+								maxlength="10"
+								required="required"
+							/>
+							<input type="button" value="중복확인" />
+						</td>
+					</tr>
+					<tr>
+						<th class="subtitle">
+							<label for="usrid">이름</label>
+						</th>
+						<td>
+							<input
+								id="usrname"
+								type="text"
+								name="usrname"
+								placeholder="실명 입력"
+								value="융융"
+								disabled="disabled"
+								required="required"
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th class="subtitle">
+							<label for="usrpwd">비밀번호</label>
+						</th>
+						<td>
+							<input
+								id="usrpwd"
+								type="password"
+								name="usrpwd"
+								placeholder="아이디 5~10사이"
+								value="1234"
+								readonly="readonly"
+								required="required"
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th class="subtitle">
+							<label for="usremail">이메일</label>
+						</th>
+						<td>
+							<input
+								id="usremail"
+								type="email"
+								name="usremail"
+								placeholder="@붙여서"
+								required="required"
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th class="subtitle">
+							<label>성별</label>
+						</th>
+						<td>
+							<label for="female">여성</label>
+							<input
+								id="female"
+								type="radio"
+								name="genderChk"
+								value="female"
+								checked
+							/>
+							<label for="male">남성</label>
+							<input
+								id="male"
+								type="radio"
+								name="genderChk"
+								value="male"
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th class="subtitle">취미</th>
+						<td>
+							<input
+								id="soccer"
+								type="checkbox"
+								name="hobby"
+								value="축구"
+								checked
+							/>
+							<label for="soccer">축구</label>
+							<input
+								id="baseball"
+								type="checkbox"
+								name="hobby"
+								value="야구"
+								checked
+							/>
+							<label for="baseball">야구</label>
+							<input
+								id="basketball"
+								type="checkbox"
+								name="hobby"
+								value="농구"
+							/>
+							<label for="basketball">농구</label>
+							<input
+								id="volleyball"
+								type="checkbox"
+								name="hobby"
+								value="배구"
+							/>
+							<label for="volleyball">배구</label>
+						</td>
+					</tr>
+					<tr>
+						<th class="subtitle">다양한 input 방법</th>
+						<td>
+							<label
+								>색상:
+								<input type="color" name="color" /> </label
+							><br />
+							<label
+								>날짜:
+								<input
+									type="date"
+									name="today"
+									min="2020-01-01"
+									max="2022-12-31"
+								/> </label
+							><br />
+							<label
+								>파일:
+								<input type="file" name="upload" /> </label
+							><br />
+							<label
+								>숫자:
+								<input
+									type="number"
+									name="number"
+									min="-10"
+									max="10"
+									value="1"
+								/> </label
+							><br />
+							<label
+								>범위:
+								<input
+									type="range"
+									name="range"
+									min="0"
+									max="50"
+								/>
+							</label>
+							<!-- hidden:사용자에게 보이지않음, 서버로 보내므로 name이 필수 -->
+							<input
+								type="hidden"
+								name="searchValue"
+								value="융융"
+							/>
+						</td>
+					</tr>
+					<tr>
+						<th class="subtitle">
+							<label for="location">지역 </label>
+						</th>
+						<td>
+							<!-- select 는 option 과 한쌍, default로 은평구 선택 -->
+							<select id="location" name="location">
+								<optgroup label="서울">
+									<option value="노원구">노원구</option>
+									<option value="은평구" selected>
+										은평구
+									</option>
+									<option value="도봉구">도봉구</option>
+									<option value="광진구">광진구</option>
+									<option value="동대문구">동대문구</option>
+								</optgroup>
+								<optgroup label="기타 지역">
+									<option value="속초">속초</option>
+									<option value="부산">부산</option>
+									<option value="인천">인천</option>
+									<option value="제주">제주</option>
+									<option value="대구">대구</option>
+								</optgroup>
+							</select>
+							<!-- select 여러개 -->
+							<select name="locations" multiple size="3">
+								<optgroup label="서울">
+									<option value="노원구">노원구</option>
+									<option value="은평구" selected>
+										은평구
+									</option>
+									<option value="도봉구">도봉구</option>
+									<option value="광진구">광진구</option>
+									<option value="동대문구">동대문구</option>
+								</optgroup>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<th class="subtitle">
+							<lable for="opinions">의견</lable>
+						</th>
+						<td>
+							<textarea
+								name="opinions"
+								id="opinions"
+								cols="30%"
+								rows="5"
+							></textarea>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<th class="subtitle" colspan="2">
+							<input type="submit" value="전송" />&nbsp;
+							<input type="reset" value="취소" />&nbsp;
+							<input type="button" value="버튼" />&nbsp;
+							<button type="button">버튼2</button>
+							<input
+								type="image"
+								src="./images/feline-track.png"
+								alt="submit"
+								height="25"
+							/>
+						</th>
+					</tr>
+				</table>
+			</form>
+		</div>
+	</body>
+</html>

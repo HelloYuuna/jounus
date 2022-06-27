@@ -1,0 +1,62 @@
+body {
+	font-family: "Courier New", Courier, monospace, "Noto Sans";
+	/* background-color: #fafaf3; */
+}
+
+div.content {
+	/* inline element는 width 스타일 부여 불가 */
+	width: 500px;
+	/* 위 오른쪽 아래 왼쪽 단위:default px */
+	/* margin: 50px 50 50 0; */
+	margin: 50px auto;
+	font-size: 0.9em;
+}
+
+/* > 기호는 child 를 가르킴 */
+div.content > h1 {
+	text-align: center;
+	background-color: #606c38;
+	color: #ffffff;
+	padding: 20px 0 20px 0;
+	margin-bottom: 0px;
+}
+
+table {
+	/* width */
+	width: 100%;
+	border-collapse: collapse;
+}
+
+tr,
+td,
+th {
+	border: 1px solid #283618;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+th {
+	width: 200px;
+}
+
+td {
+	width: 300px;
+	padding: 5px;
+	background-color: #ffffff;
+	border: 1px solid #606c38;
+}
+
+/* width, height는 인라인요소에 적용이 불가능하나 
+				테두리가있는 input 태그는 가능
+			 */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+	width: 200px;
+	height: 20px;
+}
+
+th.subtitle {
+	background-color: #606c38;
+	color: #ffffff;
+}
